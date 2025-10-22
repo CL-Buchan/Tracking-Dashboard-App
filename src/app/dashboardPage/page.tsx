@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { act, useState } from "react";
 import Link from "next/link";
+import AIChat from "../components/AIChat/path";
 import {
   ResponsiveContainer,
   LineChart,
@@ -51,7 +52,7 @@ export default function Dashboard() {
             <Link href={'../'} className="p-3 text-sm duration-500 ease-in-out rounded-2xl hover:text-[#6c757d]">Home</Link>
           </div>
 
-          {["Dashboard", "Clients", "Programs", "Chart"].map((section) => (
+          {["Dashboard", "Clients", "Programs", "Chart", "Chat"].map((section) => (
             <button key={section} onClick={() => setActiveSection(section)} className={`p-3 text-sm text-left duration-500 ease-in-out rounded-xl w-full hover:text-[#6c757d] hover:bg-[#f8f9fa] ${ activeSection === section ? "bg-[#9BD770]" : "" }`}>
               {section}
             </button>
@@ -166,6 +167,16 @@ export default function Dashboard() {
                   </ResponsiveContainer>
                 </div>
               </div>
+            </>
+          )}
+        </div>
+
+        <div id="chat">
+          {(activeSection === "Chat") && (
+            <>
+            <div>
+              <AIChat />
+            </div>
             </>
           )}
         </div>

@@ -12,8 +12,8 @@ export default function Home() {
       <main className="flex-1 flex flex-col items-start justify-center px-20 md:px-36 lg:px-50">
         <div className="flex flex-col">
           <div className="flex flex-col w-full pb-20 rounded-t-3xl">
-            <h1>Welcome.</h1>
-            <p className="text-gray-400">Created by: Callam Buchan</p>
+            <h1>Welcome, to <i>PT Manager</i>.</h1>
+            <p className="text-gray-400">By Callam Buchan</p>
           </div>
 
           <span className="flex flex-col gap-5 bg-[#1B3409] text-white p-10 rounded-3xl">
